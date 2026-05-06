@@ -1,95 +1,115 @@
 {
-  "version": "1.0",
-  "last_updated": "2026-01-01",
+  "version": "2.0",
+  "last_updated": "2026-05-07",
   "pharmacy_info": {
     "name": "Web3 Pharmacy",
-    "description": "Toko obat berbasis blockchain dengan pembayaran USDT",
-    "network": "sepolia",
-    "chain_id": 11155111
+    "tagline": "Obat Terpercaya - Konsultasi Gratis via WhatsApp"
   },
-  "medicines": [
+  "whatsapp": {
+    "number": "6281234567890",
+    "message": "Halo Web3 Pharmacy, saya ingin konsultasi obat"
+  },
+  "products": [
     {
       "id": "paracetamol-500",
       "name": "Paracetamol 500mg",
       "category": "otc",
       "description": "Untuk mengurangi demam dan nyeri. Dosis dewasa: 1-2 tablet setiap 4-6 jam",
-      "price_usdt": 2.50,
+      "price": "2.50 USDT",
+      "price_num": 2.5,
       "stock": 100,
       "requires_prescription": false,
-      "image_hash": "Qm...",
-      "manufacturer": "Kimia Farma"
-    },
-    {
-      "id": "obat-lambung-300",
-      "name": "Obat Lambung 300mg",
-      "category": "prescription",
-      "description": "Untuk masalah lambung dan asam lambung berlebih. Perlu resep dokter",
-      "price_usdt": 15.00,
-      "stock": 50,
-      "requires_prescription": true,
-      "image_hash": "Qm...",
-      "manufacturer": "Kalbe Farma"
+      "image": "https://placehold.co/400x300/4CAF50/FFFFFF?text=PARACETAMOL",
+      "featured": true,
+      "affiliate": {
+        "shopee": "https://shopee.co.id/search?keyword=paracetamol+500mg",
+        "tiktok": "https://vt.tiktok.com/link"
+      }
     },
     {
       "id": "vitamin-c-1000",
       "name": "Vitamin C 1000mg",
       "category": "vitamin",
-      "description": "Suplemen vitamin C untuk meningkatkan daya tahan tubuh. Asam askorbat 1000mg",
-      "price_usdt": 8.50,
+      "description": "Suplemen vitamin C untuk meningkatkan daya tahan tubuh",
+      "price": "8.50 USDT",
+      "price_num": 8.5,
       "stock": 200,
       "requires_prescription": false,
-      "image_hash": "Qm...",
-      "manufacturer": "Sangobion"
-    },
-    {
-      "id": "antibiotik-a-250",
-      "name": "Antibiotik A 250mg",
-      "category": "prescription",
-      "description": "Antibiotik untuk mengobati infeksi bacterial. WAJIB dengan resep dokter",
-      "price_usdt": 25.00,
-      "stock": 30,
-      "requires_prescription": true,
-      "image_hash": "Qm...",
-      "manufacturer": "Pfizer"
+      "image": "https://placehold.co/400x300/FF9800/FFFFFF?text=VITAMIN+C",
+      "featured": true,
+      "affiliate": {
+        "shopee": "https://shopee.co.id/search?keyword=vitamin+c+1000mg",
+        "tiktok": "https://vt.tiktok.com/link"
+      }
     },
     {
       "id": "salep-luka-15",
       "name": "Salep Luka 15gr",
       "category": "otc",
-      "description": "Salep untuk mempercepat penyembuhan luka dan cedera. Mengandung antibiotik topikal",
-      "price_usdt": 12.00,
+      "description": "Salep untuk mempercepat penyembuhan luka dan cedera",
+      "price": "12.00 USDT",
+      "price_num": 12.0,
       "stock": 75,
       "requires_prescription": false,
-      "image_hash": "Qm...",
-      "manufacturer": "Johnson & Johnson"
+      "image": "https://placehold.co/400x300/2196F3/FFFFFF?text=SALEP+LUKA",
+      "featured": true,
+      "affiliate": {
+        "shopee": "https://shopee.co.id/search?keyword=salep+luka",
+        "tiktok": "https://vt.tiktok.com/link"
+      }
+    },
+    {
+      "id": "obat-lambung-300",
+      "name": "Obat Lambung 300mg",
+      "category": "prescription",
+      "description": "Untuk masalah lambung dan asam lambung berlebih",
+      "price": "15.00 USDT",
+      "price_num": 15.0,
+      "stock": 50,
+      "requires_prescription": true,
+      "image": "https://placehold.co/400x300/9C27B0/FFFFFF?text=OBAT+LAMBUNG",
+      "featured": false,
+      "affiliate": {
+        "shopee": "https://shopee.co.id/search?keyword=obat+lambung",
+        "tiktok": "https://vt.tiktok.com/link"
+      }
+    },
+    {
+      "id": "antibiotik-a-250",
+      "name": "Antibiotik A 250mg",
+      "category": "prescription",
+      "description": "Antibiotik untuk mengobati infeksi bacterial",
+      "price": "25.00 USDT",
+      "price_num": 25.0,
+      "stock": 30,
+      "requires_prescription": true,
+      "image": "https://placehold.co/400x300/F44336/FFFFFF?text=ANTIBIOTIK",
+      "featured": false,
+      "affiliate": {
+        "shopee": "https://shopee.co.id/search?keyword=antibiotik",
+        "tiktok": "https://vt.tiktok.com/link"
+      }
     },
     {
       "id": "obat-diabetes-500",
       "name": "Obat Diabetes 500mg",
       "category": "prescription",
-      "description": "Untuk mengontrol kadar gula darah pada penderita diabetes. WAJIB dengan resep dokter",
-      "price_usdt": 35.00,
+      "description": "Untuk mengontrol kadar gula darah pada penderita diabetes",
+      "price": "35.00 USDT",
+      "price_num": 35.0,
       "stock": 25,
       "requires_prescription": true,
-      "image_hash": "Qm...",
-      "manufacturer": "Novo Nordisk"
+      "image": "https://placehold.co/400x300/00BCD4/FFFFFF?text=DIABETES",
+      "featured": false,
+      "affiliate": {
+        "shopee": "https://shopee.co.id/search?keyword=obat+diabetes",
+        "tiktok": "https://vt.tiktok.com/link"
+      }
     }
   ],
   "categories": [
-    {
-      "id": "otc",
-      "name": "OTC - Tanpa Resep",
-      "description": "Obat bebas yang bisa dibeli tanpa resep dokter"
-    },
-    {
-      "id": "prescription",
-      "name": "Obat Keras",
-      "description": "Obat yang memerlukan resep dokter"
-    },
-    {
-      "id": "vitamin",
-      "name": "Vitamin & Suplemen",
-      "description": "Produk suplemen kesehatan"
-    }
+    {"id": "otc", "name": "OTC - Tanpa Resep", "icon": "bi-bandaid"},
+    {"id": "prescription", "name": "Obat Keras", "icon": "bi-heart-pulse"},
+    {"id": "vitamin", "name": "Vitamin & Suplemen", "icon": "bi-capsule"}
   ]
 }
