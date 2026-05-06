@@ -127,7 +127,7 @@ const ProductsPage = {
         `).join('');
     },
 
-    // Buy product
+    // Buy product - Show purchase options modal
     buyProduct(productId) {
         const product = this.products.find(p => p.id === productId);
         if (!product) return;
@@ -139,11 +139,50 @@ const ProductsPage = {
             return;
         }
 
-        // Direct purchase for OTC
-        if (confirm(`Beli ${product.name} seharga ${product.price_usdt} USDT?`)) {
-            Web3Pharmacy.showNotification(`Pembelian ${product.name} diproses...`, 'info');
-            // Would call smart contract here
-        }
+        // Create purchase options modal
+        const modalHtml = `
+            <div class="modal fade" id="buyOptionsModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 shadow">
+                        <div class="modal-header border-0 pb-0">
+                            <h5 class="modal-title fw-bold">
+                                <i class="bi bi-cart-check text-primary me-2"></i>
+                                Beli ${product.name}
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-muted mb-3">Pilih cara pembelian:</p>
+                            <div class="d-grid gap-2">
+                                <a href="https://shopee.co.id/search?keyword=${encodeURIComponent(product.name)}" 
+                                   target="_blank" class="btn btn-primary">
+                                    <i class="bi bi-bag me-2"></i>Beli di Shopee
+                                </a>
+                                <a href="https://vt.tiktok.com/link" target="_blank" class="btn btn-dark">
+                                    <i class="bi bi-tiktok me-2"></i>Beli di TikTok Shop
+                                </a>
+                                <a href="https://wa.me/6281234567890?text=Halo%20Web3%20Pharmacy%2C%20saya%20ingin%20membeli%20${encodeURIComponent(product.name)}" 
+                                   target="_blank" class="btn btn-success">
+                                    <i class="bi bi-whatsapp me-2"></i>Beli via WhatsApp
+                                </a>
+                                <!-- Ganti 6281234567890 dengan nomor WA Anda -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Remove existing modal if any
+        const existingModal = document.getElementById('buyOptionsModal');
+        if (existingModal) existingModal.remove();
+        
+        // Add modal to body
+        document.body.insertAdjacentHTML('beforeend', modalHtml);
+        
+        // Show modal
+        const modal = new bootstrap.Modal(document.getElementById('buyOptionsModal'));
+        modal.show();
     },
 
     // Initialize
