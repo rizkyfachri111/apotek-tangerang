@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-01-01",
+  "pharmacy_info": {
+    "name": "Web3 Pharmacy",
+    "description": "Toko obat berbasis blockchain dengan pembayaran USDT",
+    "network": "sepolia",
+    "chain_id": 11155111
+  },
+  "medicines": [
+    {
+      "id": "paracetamol-500",
+      "name": "Paracetamol 500mg",
+      "category": "otc",
+      "description": "Untuk mengurangi demam dan nyeri. Dosis dewasa: 1-2 tablet setiap 4-6 jam",
+      "price_usdt": 2.50,
+      "stock": 100,
+      "requires_prescription": false,
+      "image_hash": "Qm...",
+      "manufacturer": "Kimia Farma"
+    },
+    {
+      "id": "obat-lambung-300",
+      "name": "Obat Lambung 300mg",
+      "category": "prescription",
+      "description": "Untuk masalah lambung dan asam lambung berlebih. Perlu resep dokter",
+      "price_usdt": 15.00,
+      "stock": 50,
+      "requires_prescription": true,
+      "image_hash": "Qm...",
+      "manufacturer": "Kalbe Farma"
+    },
+    {
+      "id": "vitamin-c-1000",
+      "name": "Vitamin C 1000mg",
+      "category": "vitamin",
+      "description": "Suplemen vitamin C untuk meningkatkan daya tahan tubuh. Asam askorbat 1000mg",
+      "price_usdt": 8.50,
+      "stock": 200,
+      "requires_prescription": false,
+      "image_hash": "Qm...",
+      "manufacturer": "Sangobion"
+    },
+    {
+      "id": "antibiotik-a-250",
+      "name": "Antibiotik A 250mg",
+      "category": "prescription",
+      "description": "Antibiotik untuk mengobati infeksi bacterial. WAJIB dengan resep dokter",
+      "price_usdt": 25.00,
+      "stock": 30,
+      "requires_prescription": true,
+      "image_hash": "Qm...",
+      "manufacturer": "Pfizer"
+    },
+    {
+      "id": "salep-luka-15",
+      "name": "Salep Luka 15gr",
+      "category": "otc",
+      "description": "Salep untuk mempercepat penyembuhan luka dan cedera. Mengandung antibiotik topikal",
+      "price_usdt": 12.00,
+      "stock": 75,
+      "requires_prescription": false,
+      "image_hash": "Qm...",
+      "manufacturer": "Johnson & Johnson"
+    },
+    {
+      "id": "obat-diabetes-500",
+      "name": "Obat Diabetes 500mg",
+      "category": "prescription",
+      "description": "Untuk mengontrol kadar gula darah pada penderita diabetes. WAJIB dengan resep dokter",
+      "price_usdt": 35.00,
+      "stock": 25,
+      "requires_prescription": true,
+      "image_hash": "Qm...",
+      "manufacturer": "Novo Nordisk"
+    }
+  ],
+  "categories": [
+    {
+      "id": "otc",
+      "name": "OTC - Tanpa Resep",
+      "description": "Obat bebas yang bisa dibeli tanpa resep dokter"
+    },
+    {
+      "id": "prescription",
+      "name": "Obat Keras",
+      "description": "Obat yang memerlukan resep dokter"
+    },
+    {
+      "id": "vitamin",
+      "name": "Vitamin & Suplemen",
+      "description": "Produk suplemen kesehatan"
+    }
+  ]
+}
